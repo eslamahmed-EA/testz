@@ -119,9 +119,7 @@
             <form class="booking-form" id="bookingForm">
                 <input type="hidden" name="source" value="MK RIDESHARE LLC Booking Form">
                 <input type="hidden" name="timestamp" value="">
-                <script>
-                    document.getElementById('bookingForm').timestamp.value = new Date().toISOString();
-                </script>
+                
                 <div class="form-row">
                     <div class="form-group">
                         <label for="pickup">Pickup Location</label>
@@ -132,6 +130,7 @@
                         <input type="text" id="destination" name="destination" placeholder="Enter destination" required>
                     </div>
                 </div>
+            
                 <div class="form-row">
                     <div class="form-group">
                         <label for="date">Date</label>
@@ -142,6 +141,7 @@
                         <input type="time" id="time" name="time" required>
                     </div>
                 </div>
+            
                 <div class="form-row">
                     <div class="form-group">
                         <label for="passengers">Passengers</label>
@@ -161,10 +161,10 @@
                             <option value="black">Black</option>
                             <option value="black-suv">Black SUV</option>
                             <option value="hourly">Hourly Service</option>
-                          
                         </select>
                     </div>
                 </div>
+            
                 <div class="form-row">
                     <div class="form-group">
                         <label for="name">Full Name</label>
@@ -172,15 +172,18 @@
                     </div>
                     <div class="form-group">
                         <label for="phone">Phone Number</label>
-                        <input type="tel" id="phone" name="phone" placeholder="Enter phone number (e.g., 3139420666)" inputmode="numeric" pattern="[0-9]{9,12}" maxlength="12" title="Please enter 9-12 digits" required>
+                        <input type="tel" id="phone" name="phone" placeholder="Enter phone number" inputmode="numeric" pattern="[0-9]{9,12}" maxlength="12" required>
                     </div>
                 </div>
+            
                 <div class="form-group">
                     <label for="notes">Special Requirements</label>
-                    <textarea id="notes" name="notes" placeholder="Any special requests or notes (e.g., hourly service duration, number of stops, event details, etc.)"></textarea>
+                    <textarea id="notes" name="notes" placeholder="Any special requests or notes"></textarea>
                 </div>
+            
                 <button type="submit" class="btn btn-primary btn-large">Request Quote</button>
             </form>
+            
         </div>
     </section>
 
@@ -296,5 +299,6 @@
     </div>
 
     <script src="script.js"></script>
+    <script src="booking.js"></script>
 </body>
 </html>

@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MK RIDESHARE LLC - Luxury Transportation in Michigan</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="#home" class="nav-link">
+                    <h2>MK RIDESHARE LLC</h2>
+                </a>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#services" class="nav-link">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#booking" class="nav-link">Book Now</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            <div class="nav-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Luxury Transportation Services</h1>
+            <p>Premium rideshare experience with professional drivers and luxury vehicles across Michigan</p>
+            <div class="hero-buttons">
+                <a href="#booking" class="btn btn-primary">Book Now</a>
+                <a href="#services" class="btn btn-secondary">Our Services</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2>Our Premium Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <i class="fas fa-car"></i>
+                    <h3>Black</h3>
+                    <p>Premium sedan service for business and personal transportation</p>
+                    <ul>
+                        <li>Luxury sedans</li>
+                        <li>Professional drivers</li>
+                        <li>Premium amenities</li>
+                        <li>1-4 passengers</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-car-side"></i>
+                    <h3>Black SUV</h3>
+                    <p>Spacious luxury SUV service for groups and extra comfort</p>
+                    <ul>
+                        <li>Premium SUVs</li>
+                        <li>Extra space & luggage</li>
+                        <li>Group transportation</li>
+                        <li>1-6 passengers</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-clock"></i>
+                    <h3>Hourly Service</h3>
+                    <p>Professional chauffeur service by the hour for events, meetings, and special occasions</p>
+                    <ul>
+                        <li>Dedicated driver & vehicle</li>
+                        <li>Multiple stops allowed</li>
+                        <li>Wait time included</li>
+                        <li>Perfect for events & meetings</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-plane"></i>
+                    <h3>Airport Service</h3>
+                    <p>Reliable airport transfers with flight monitoring and meet & greet</p>
+                    <ul>
+                        <li>Flight tracking</li>
+                        <li>Meet & greet service</li>
+                        <li>Luggage assistance</li>
+                        <li>On-time guarantee</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-calendar-check"></i>
+                    <h3>Event Services</h3>
+                    <p>Everyone wants their special event day to be truly memorable. At MK RIDESHARE, we make it a reality with our premium fleet of luxury SUVs and sedans, bringing elegance and style to your most important occasions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Section -->
+    <section id="booking" class="booking-section">
+        <div class="container">
+            <h2>Book Your Luxury Ride</h2>
+            <form class="booking-form" id="bookingForm">
+                <input type="hidden" name="source" value="MK RIDESHARE LLC Booking Form">
+                <input type="hidden" name="timestamp" value="">
+                <script>
+                    document.getElementById('bookingForm').timestamp.value = new Date().toISOString();
+                </script>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="pickup">Pickup Location</label>
+                        <input type="text" id="pickup" name="pickup" placeholder="Enter pickup address" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="destination">Destination</label>
+                        <input type="text" id="destination" name="destination" placeholder="Enter destination" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="date">Date</label>
+                        <input type="date" id="date" name="date" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="time">Time</label>
+                        <input type="time" id="time" name="time" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="passengers">Passengers</label>
+                        <select id="passengers" name="passengers" required>
+                            <option value="">Select passengers</option>
+                            <option value="1">1 Passenger</option>
+                            <option value="2">2 Passengers</option>
+                            <option value="3">3 Passengers</option>
+                            <option value="4">4 Passengers</option>
+                            <option value="5+">5+ Passengers</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="service">Service Type</label>
+                        <select id="service" name="service" required>
+                            <option value="">Select service</option>
+                            <option value="black">Black</option>
+                            <option value="black-suv">Black SUV</option>
+                            <option value="hourly">Hourly Service</option>
+                          
+                        </select>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" placeholder="Your full name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" placeholder="Enter phone number (e.g., 3139420666)" inputmode="numeric" pattern="[0-9]{9,12}" maxlength="12" title="Please enter 9-12 digits" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="notes">Special Requirements</label>
+                    <textarea id="notes" name="notes" placeholder="Any special requests or notes (e.g., hourly service duration, number of stops, event details, etc.)"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary btn-large">Request Quote</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>About MK RIDESHARE LLC</h2>
+                    <p>MK RIDESHARE LLC is Michigan's premier luxury transportation service, providing executive-level rides across the state. We specialize in high-end transportation solutions for business professionals, special events, and discerning travelers who demand excellence.</p>
+                    <div class="about-features">
+                        <div class="feature">
+                            <i class="fas fa-shield-alt"></i>
+                            <h3>Safety First</h3>
+                            <p>All drivers are thoroughly vetted and vehicles are regularly inspected for your safety and peace of mind.</p>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-clock"></i>
+                            <h3>Always On Time</h3>
+                            <p>We pride ourselves on punctuality, ensuring you arrive at your destination on schedule, every time.</p>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-star"></i>
+                            <h3>Premium Service</h3>
+                            <p>Experience the highest level of service with our professional drivers and luxury vehicle fleet.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <div class="contact-grid">
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <div>
+                        <h4>Phone</h4>
+                        <p>(313) 942-0666</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <div>
+                        <h4>Email</h4>
+                        <p>mkrideshare@gmail.com</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>
+                        <h4>Service Area</h4>
+                        <p>Michigan, USA</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-clock"></i>
+                    <div>
+                        <h4>Hours</h4>
+                        <p>24/7 Service Available</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="floating-shape"></div>
+        <div class="floating-shape"></div>
+        <div class="floating-shape"></div>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>MK RIDESHARE LLC</h3>
+                    <p>Premium luxury transportation services across Michigan. Professional drivers, luxury vehicles, and exceptional service.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p>Phone: <a href="tel:+13139420666" onclick="window.location.href='tel:+13139420666'; return false;">(313) 942-0666</a></p>
+                    <p>Email: <a href="mailto:mkrideshare@gmail.com" target="_blank" onclick="window.open('mailto:mkrideshare@gmail.com', '_blank'); return false;">mkrideshare@gmail.com</a></p>
+                    <p>Service Area: Michigan, USA</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy;  MK RIDESHARE LLC. All rights reserved. | Designed with excellence for premium transportation.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Quick Booking Modal -->
+    <div id="bookingModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Quick Booking</h2>
+                <span class="close" onclick="closeBookingModal()">&times;</span>
+            </div>
+            <form class="quick-booking-form">
+                <input type="hidden" name="source" value="MK RIDESHARE LLC Quick Booking Form">
+                <script>
+                    document.querySelector('.quick-booking-form').timestamp.value = new Date().toISOString();
+                </script>
+                <input type="text" name="pickup_location" placeholder="Pickup Location" required>
+                <input type="text" name="destination" placeholder="Destination" required>
+                <input type="datetime-local" name="datetime_local" required>
+                <input type="tel" name="phone_number" placeholder="Phone Number" inputmode="numeric" pattern="[0-9]{9,12}" maxlength="12" title="Please enter 9-12 digits" required>
+                <button type="submit" class="btn btn-primary">Book Now</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
